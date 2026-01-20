@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hazard Hour: Echoes (CS 1.6-inspired)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ui">
+      <div class="title">
+        <h1>Hazard Hour: Echoes</h1>
+        <p>Round-based tactical shooter, inspired by the pacing of CS 1.6.</p>
+      </div>
+      <div class="hud">
+        <div class="hud__row">
+          <span id="round">Round 1</span>
+          <span id="timer">01:45</span>
+        </div>
+        <div class="hud__row">
+          <span id="team">Alpha</span>
+          <span id="objective">Objective: Secure the uplink</span>
+        </div>
+        <div class="hud__row">
+          <span id="health">Health: 100</span>
+          <span id="ammo">Ammo: 12 / 48</span>
+        </div>
+      </div>
+      <div class="script" id="script">
+        <h2>Mission Script</h2>
+        <p id="script-line">Loading mission script...</p>
+      </div>
+      <div class="controls">
+        <h3>Controls</h3>
+        <ul>
+          <li>WASD: Move</li>
+          <li>Mouse: Aim</li>
+          <li>Left Click: Fire</li>
+          <li>R: Reload</li>
+          <li>Space: Interact</li>
+          <li>Tab: Scoreboard</li>
+        </ul>
+      </div>
+    </div>
+    <canvas id="game" width="960" height="540" aria-label="Game canvas"></canvas>
+    <div class="scoreboard" id="scoreboard" aria-hidden="true">
+      <div class="scoreboard__panel">
+        <h2>Scoreboard</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Team</th>
+              <th>K</th>
+              <th>D</th>
+              <th>Ping</th>
+            </tr>
+          </thead>
+          <tbody id="scoreboard-body"></tbody>
+        </table>
+        <p class="scoreboard__hint">Release Tab to close.</p>
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
